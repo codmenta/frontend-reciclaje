@@ -1,13 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { Toaster } from "sonner";
-import { Leaf, LogOut, ChevronDown, LayoutDashboard, MapPin, ShoppingBag, History, Bell, Star, Settings, Package, Menu, X, Gift } from "lucide-react";
+import { Leaf, LogOut, ChevronDown, LayoutDashboard, MapPin, ShoppingBag, History, Bell, Star, Settings, Package, Menu, X, Gift, Home } from "lucide-react";
 
 import Landing from "./components/Landing";
 import Registro from "./components/Registro";
 import Login from "./components/Login";
 import Panel from "./components/Panel";
 import MapaPuntos from "./components/MapaPuntos";
+import MapaInicio from "./components/Mapa";
 import Productos from "./components/Productos";
 import Historial from "./components/Historial";
 import EncargadoDashboard from "./components/EncargadoDashboard";
@@ -59,6 +60,7 @@ function App() {
   if (modo === "REGISTRO") return (<div className="min-h-screen bg-slate-900 flex items-center justify-center p-4"><Toaster position="top-center" richColors /><Registro alRegistrar={login} irALogin={() => setModo("LOGIN")} /></div>);
 
   const NAV = [
+    { id: "inicio", label: "Inicio", icon: Home, roles: ["RECICLADOR", "ENCARGADO", "ADMINISTRADOR"] },
     { id: "panel", label: "Panel", icon: LayoutDashboard, roles: ["RECICLADOR", "ENCARGADO", "ADMINISTRADOR"] },
     { id: "puntos", label: "Puntos de Recolección", icon: MapPin, roles: ["RECICLADOR"] },
     { id: "productos", label: "Productos", icon: ShoppingBag, roles: ["RECICLADOR"] },
@@ -77,6 +79,7 @@ function App() {
       return <AdminDashboard usuario={usuario} irAAlmacen={() => nav("almacen")} />;
     }
     switch (vista) {
+      case "inicio": return <MapaInicio />;
       case "puntos": return <MapaPuntos />;
       case "productos": return <Productos usuario={usuario} />;
       case "historial": return <Historial usuario={usuario} />;
