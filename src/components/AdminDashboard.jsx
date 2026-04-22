@@ -15,7 +15,7 @@ const AdminDashboard = ({ usuario, irAAlmacen }) => {
     <div className="max-w-4xl mx-auto animate-in fade-in zoom-in duration-700 pb-16">
 
       {/* HEADER */}
-      <div className="bg-gradient-to-br from-green-600 via-green-700 to-emerald-900 p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] text-white shadow-2xl relative overflow-hidden mb-6 sm:mb-10 text-left border-4 border-white/20">
+      <div className="bg-linear-to-br from-green-600 via-green-700 to-emerald-900 p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] text-white shadow-2xl relative overflow-hidden mb-6 sm:mb-10 text-left border-4 border-white/20">
         <div className="relative z-10">
           <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
             <div className="bg-white/20 p-2 rounded-xl backdrop-blur-md border border-white/30 text-green-100">
@@ -45,7 +45,7 @@ const AdminDashboard = ({ usuario, irAAlmacen }) => {
                   {metricas.totalKilos} <span className="text-xs">KG</span>
                 </p>
               </div>
-              <div className="w-[1px] bg-white/20"></div>
+              <div className="w-px bg-white/20"></div>
               <div>
                 <p className="text-[8px] sm:text-[9px] font-black uppercase text-green-200 tracking-widest mb-1">
                   Estado
