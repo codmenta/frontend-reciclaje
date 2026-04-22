@@ -171,7 +171,7 @@ const GestionCatalogo = ({ alRegresar }) => {
                 <button
                   type="button"
                   onClick={() => setDatos({ ...datos, activo: !datos.activo })}
-                  className="flex-shrink-0"
+                  className="shrink-0"
                 >
                   {datos.activo
                     ? <ToggleRight className="w-10 h-10 text-green-600" />
@@ -207,13 +207,13 @@ const GestionCatalogo = ({ alRegresar }) => {
             <div className="flex items-center gap-4">
               <img
                 src={p.imagenUrl || "https://via.placeholder.com/150/f0fdf4/16a34a?text=Eco"}
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover flex-shrink-0 border border-gray-100"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover shrink-0 border border-gray-100"
                 alt={p.nombre}
               />
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between gap-2">
                   <h4 className="font-bold text-sm text-gray-900 truncate">{p.nombre}</h4>
-                  <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold flex-shrink-0 ${
+                  <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ${
                     p.activo !== false ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-500"
                   }`}>
                     {p.activo !== false ? "Activo" : "Inactivo"}
